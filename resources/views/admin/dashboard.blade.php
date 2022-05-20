@@ -176,7 +176,7 @@
                 <div class="col-12">
                   <div class="card">
                     <div class="table-responsive">
-                      @include('components.usertable')
+                      @include('admin.components.usertable')
                     </div>
                   </div>
                 </div>

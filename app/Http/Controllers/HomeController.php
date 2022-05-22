@@ -17,5 +17,15 @@ class HomeController extends Controller
                 return redirect(route('user.dashboard'));
                 break;
         }
+
+        switch (Auth::user()->role) {
+            case 'siswa':
+                return redirect(route('siswa.dashboard'));
+                break;
+            
+            default:
+                return redirect(route('user.dashboard'));
+                break;
+        }
     }
 }

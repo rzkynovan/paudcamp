@@ -15,7 +15,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $users = User::orderBy("created_at", "ASC")->paginate(30);
+        $users = User::orderBy("created_at", "ASC")->paginate(5);
         return view('admin.dashboard', compact('users'));
     }
 

@@ -51,5 +51,4 @@
       </tr>
     </tbody>
     @endforeach
-    {{ $users -> links() }}
   </table>

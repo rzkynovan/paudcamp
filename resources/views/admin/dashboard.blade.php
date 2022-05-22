@@ -178,6 +178,9 @@
                     <div class="table-responsive">
                       @include('admin.components.usertable')
                     </div>
+                    <div class="card-footer">
+                      {!! $users ->links('admin.components.custom-pagination') !!}
+                    </div>
                   </div>
                 </div>
               </div>

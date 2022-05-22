@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboard;
+use App\Http\Controllers\HomeController;
+use Illuminate\Routing\RouteGroup;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +24,8 @@ Route::get('/', function () {
 //     return view('admin.dashboard');
 // })->middleware(['auth'])->name('dashboard');
 
-Route::get('/dashboard', [AdminDashboard::class, 'index'])->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [HomeController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
+
+Route::get('admin/dashboard', [AdminDashboard::class, 'index'])->name('admin.dashboard');
 
 require __DIR__.'/auth.php';

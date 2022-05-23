@@ -13,7 +13,8 @@
               </span>
             </a>
           </li>
-          <li class="nav-item active">
+          {{-- {{ (strpos(Route::currentRouteName(), Auth::user()->role . '/dashboard') == 0 ) ? 'active' : '' }} --}}
+          <li class="nav-item {{ (strpos(Route::currentRouteName(), Auth::user()->role . '/dashboard') == 0 ) ? 'active' : '' }}">
             <a class="nav-link" href="{{ route('dashboard') }}" >
               <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-grip-horizontal" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -40,10 +41,10 @@
                 Master
               </span>
             </a>
-            <div class="dropdown-menu">
+            <div class="dropdown-menu {{ (strpos(Route::currentRouteName(), Auth::user()->role . '/siswatable') == 0 ) ? 'active' : '' }}">
               <div class="dropdown-menu-columns">
                 <div class="dropdown-menu-column">
-                  <a class="dropdown-item" href="./layout-horizontal.html" >
+                  <a class="dropdown-item" href="{{ route('tablesiswa') }}" >
                     Siswa
                   </a>
                   <a class="dropdown-item" href="./layout-boxed.html" >
@@ -90,7 +91,7 @@
           </li>
         </ul>
         <div class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last">
-          <form action="." method="get">
+          {{-- <form action="." method="get">
             <div class="input-icon">
               <span class="input-icon-addon">
                 <!-- Download SVG icon from http://tabler-icons.io/i/search -->
@@ -98,7 +99,7 @@
               </span>
               <input type="text" value="" class="form-control" placeholder="Search…" aria-label="Search in website">
             </div>
-          </form>
+          </form> --}}
         </div>
       </div>
     </div>

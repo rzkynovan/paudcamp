@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboard;
+use App\Http\Controllers\Admin\SiswaController as AdminSiswa;
 use App\Http\Controllers\HomeController;
 use Illuminate\Routing\RouteGroup;
 
@@ -27,5 +28,6 @@ Route::get('/', function () {
 Route::get('/dashboard', [HomeController::class, 'dashboard'])->middleware(['auth'])->name('dashboard');
 
 Route::get('admin/dashboard', [AdminDashboard::class, 'index'])->name('admin.dashboard');
+Route::get('admin/siswatable', [AdminSiswa::class, 'index'])->name('tablesiswa');
 
 require __DIR__.'/auth.php';

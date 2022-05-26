@@ -1,3 +1,10 @@
+
+<style>
+    .input-phone{
+        display: grid;
+        grid-template-columns: .3fr 1fr;
+    }
+</style>
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
@@ -25,6 +32,15 @@
 
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
+            <!-- Phone Number -->
+            {{-- <div class="mt-4">
+                <x-label for="phone_number" :value="__('Phone Number')" />
+                <div class="input-phone">
+
+                    <x-input id="" class="block mt-1 w-full" type="text" name="" :value="'+62'" disabled />
+                    <x-input id="phone_number" class="block mt-1 w-full" type="text" name="phone_number" :value="old('phone_number')" required />
+                </div>
+            </div> --}}
 
             <!-- Password -->
             <div class="mt-4">

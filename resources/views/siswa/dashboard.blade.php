@@ -91,7 +91,7 @@
               <div class="col-12 mt-4">
                 <div class="card">
                   <div class="table-responsive">
-                    @include('siswa.components.siswatable')
+                    @include('siswa.siswatable')
                   </div>
                   <div class="card-footer">
                     {{-- {!! $users ->links('admin.components.custom-pagination') !!} --}}
